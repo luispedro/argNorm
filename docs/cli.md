@@ -156,4 +156,4 @@ argnorm hamronization -i examples/hamronized/groot.card.tsv -o outputs/hamronize
 argnorm hamronization -i examples/hamronized/groot.groot-db.tsv -o outputs/hamronized/groot.groot-db.tsv
 argnorm hamronization -i examples/hamronized/groot.groot-core-db.tsv -o outputs/hamronized/groot.groot-core-db.tsv
 argnorm hamronization -i examples/hamronized/combined_hamronization.tsv -o outputs/hamronized/combined_hamronization.tsv
-argnorm hamronization -i examples/hamronized/combined_hamronization_full.tsv -o outputs/hamronized/combined_hamronization_full.tsv ----hamronization_skip_unsupported_tool
+argnorm hamronization -i examples/hamronized/combined_hamronization_full.tsv -o outputs/hamronized/combined_hamronization_full.tsv --hamronization_skip_unsupported_tool

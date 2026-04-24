@@ -48,7 +48,7 @@ def get_aro_mapping_table(database):
     Description: Returns the ARO mapping table for a specific supported databases.
 
     Parameters:
-        database (str): name of database. Can be: argannot, deeparg, megares, ncbi, resfinderfg and sarg
+        database (str): name of database. Can be: argannot, deeparg, megares, ncbi, resfinder, resfinderfg, sarg, groot-db, groot-core-db, groot-argannot, groot-resfinder, groot-card, and abricate-card
 
     Returns:
         aro_mapping_table (DataFrame): A pandas dataframe with ARGs mapped to AROs.
@@ -90,7 +90,7 @@ def map_to_aro(gene, database):
     Returns:
         ARO[result] (pronto.term.Term): A pronto term with the ARO number of input gene. ARO number can be accessed using 'id' attribute and gene name can be accessed using 'name' attribute.
 
-        If ARO mapping is doesn't exist, None is returned.
+        If ARO mapping doesn't exist, None is returned.
     """
     import pandas as pd
 

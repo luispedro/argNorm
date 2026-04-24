@@ -91,7 +91,7 @@ argNorm is also available as an [nf-core module](https://nf-co.re/modules/argnor
 nf-core modules install argnorm
 ```
 
-argNorm is readily available in the funcscan pipeline which can be accessed (here)[https://github.com/nf-core/funcscan]
+argNorm is readily available in the funcscan pipeline which can be accessed [here](https://github.com/nf-core/funcscan)
 
 ## Tutorial video
 
@@ -104,7 +104,7 @@ argNorm is readily available in the funcscan pipeline which can be accessed (her
 Here is a basic outline of calling argNorm.
 
 ```bash
-argnorm [tool] [--db] -i [path to original_annotation.tsv] -o [path to annotation_result_with_aro.tsv] [----hamronization_skip_unsupported_tool]
+argnorm [tool] [--db] -i [path to original_annotation.tsv] -o [path to annotation_result_with_aro.tsv] [--hamronization_skip_unsupported_tool]
 ```
 
 **Resource requirements**: argNorm takes a few seconds to run (even for 1,000s of input genes) and requires only _ca_ 200MiB of RAM.

@@ -42,7 +42,7 @@ Right now, many tools exist for annotation ARGs in genomes and metagenomes. Howe
 
 The [hAMRonization package](https://github.com/pha4ge/hAMRonization) can normalize file formats, but each tool will use different names/identifiers (_e.g._, `TetA` or `TETA` or `tet(A)` or `tet-A` are all different ways to spell the same gene name).
 
-For a small number of isolate genomes, a human user can manually evaluate the outputs. However, in metagnomics, especially for large-scale projects, this becomes infeasible. Thus argNorm normalizes the output vocabulary of ARG annotation tools by mapping them to the same ontology (ARO).
+For a small number of isolate genomes, a human user can manually evaluate the outputs. However, in metagenomics, especially for large-scale projects, this becomes infeasible. Thus argNorm normalizes the output vocabulary of ARG annotation tools by mapping them to the same ontology (ARO).
 
 Besides performing normalization, argNorm also provides categorization of drugs that antibiotic resistance genes confer resistance to. 
 
@@ -91,7 +91,7 @@ argNorm is also available as an [nf-core module](https://nf-co.re/modules/argnor
 nf-core modules install argnorm
 ```
 
-argNorm is readily available in the funcscan pipeline which can be accessed (here)[https://github.com/nf-core/funcscan]
+argNorm is readily available in the funcscan pipeline which can be accessed [here](https://github.com/nf-core/funcscan)
 
 ## Tutorial video
 
@@ -104,7 +104,7 @@ argNorm is readily available in the funcscan pipeline which can be accessed (her
 Here is a basic outline of calling argNorm.
 
 ```bash
-argnorm [tool] [--db] -i [path to original_annotation.tsv] -o [path to annotation_result_with_aro.tsv] [----hamronization_skip_unsupported_tool]
+argnorm [tool] [--db] -i [path to original_annotation.tsv] -o [path to annotation_result_with_aro.tsv] [--hamronization_skip_unsupported_tool]
 ```
 
 ### `tool` (required)
@@ -144,9 +144,6 @@ ARG annotation tools can use several ARG databases for annotation. Hence, the `t
 | `amrfinderplus` | Not required |
 | `groot`         | Any from `groot-argannot`, `groot-resfinder`, `groot-db`, `groot-core-db`, or `groot-card` |
 | `hamronization` | Not required |
-
-### `--hamronized` (optional)
-Use this if the input is hamronized by [hAMRonization](https://github.com/pha4ge/hAMRonization) v1.1 and v1.0.4
 
 ### `--hamronization_skip_unsupported_tool` (*optional*)
 Combined hamronization results can have ARGs detected by unsupported tools (e.g. staramr). By default, argNorm throws an exception as these are unsupported tools, however, `--hamronization_skip_unsupported_tool` allows users to skip rows with unsupported tools. A warning will be raised rather than an exception.

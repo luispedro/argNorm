@@ -48,7 +48,6 @@ Otherwise, no major changes.
 
 
 #### Added `HamronizationNormalizer` and `--hamronization_skip_unsupported_tool`
-#### Added `HamronizationNormalizer` and `--hamronization_skip_unsupported_tool`
 - All hamronized results now go through the `HamronizationNormalizer` class.
 - Removed the `is_hamronized` property for all normalizers and removed `--hamronized` flag for CLI.
 - HamronizationNormalizer reads a hamronized file line by line, procures input genes, and loads all ARO mapping tables to support hamronized results that combine the outputs from multiple tools and databases.

@@ -10,12 +10,12 @@ A list of supported databases.
 
 #### Parameters
 * gene (str): The original ID of the gene as mentioned in source database.
-* database (str): name of database. Can be: argannot, deeparg, megares, ncbi, resfinderfg, sarg, groot-db, groot-core-db, groot-argannot, groot-resfinder, and groot-card
+* database (str): name of database. Can be: argannot, deeparg, megares, ncbi, resfinder, resfinderfg, sarg, groot-db, groot-core-db, groot-argannot, groot-resfinder, groot-card, and abricate-card
 
 #### Returns
 * pronto.term.Term: A pronto term with the ARO number of input gene. ARO number can be accessed using 'id' attribute and gene name can be accessed using 'name' attribute. 
 
-> Note: if ARO mapping is doesn't exist, None is returned.
+> Note: if ARO mapping doesn't exist, None is returned.
 
 #### Example
 
@@ -32,7 +32,7 @@ print(map_to_aro('argannot~~~(Bla)cfxA4~~~AY769933:1-966', 'groot-argannot'))
 ### argnorm.lib.get_aro_mapping_table(): gets ARO mapping table for a specific database
 
 #### Parameters 
-* database (str): name of database. Can be: argannot, deeparg, megares, ncbi, resfinderfg, sarg, groot-db, groot-core-db, groot-argannot, groot-resfinder, and groot-card
+* database (str): name of database. Can be: argannot, deeparg, megares, ncbi, resfinder, resfinderfg, sarg, groot-db, groot-core-db, groot-argannot, groot-resfinder, groot-card, and abricate-card
 
 #### Returns
 * pandas.DataFrame: A pandas dataframe with ARGs mapped to AROs.
@@ -122,7 +122,7 @@ Save the following piece of Python code in the `argnorm_normalizers_tutorial` fo
 ```
 from argnorm.normalizers import ResFinderNormalizer
 
-resfinder_normalizer = ResFinderNormalizer(is_hamronized=False)
+resfinder_normalizer = ResFinderNormalizer()
 resfinder_normalizer.run('./resfinder.resfinder.orfs.tsv').to_csv('./resfinder.resfinder.orfs.normed.tsv', sep='\t')
 ```
 

@@ -11,8 +11,8 @@ def normalize(ifile, tool : str, database : str, skip_on_unsupported_tool : bool
     tool : str
     database : str
         Database to use
-    is_hamronized : bool
-        Whether input has been run through hAMRonization already
+    skip_on_unsupported_tool : bool
+        Whether to skip rows with unsupported tools in hamronization outputs
     '''
     normalizer = {
         'abricate': AbricateNormalizer,
