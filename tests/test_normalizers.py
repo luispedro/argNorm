@@ -51,7 +51,7 @@ def test_abricate_normalizer(database):
 
 @pytest.mark.parametrize('database', ['random_db', 'sarg', 'resfinderfg', 'card'])
 def test_abricate_validation(database):
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         argnorm.AbricateNormalizer(database=database)
 
 

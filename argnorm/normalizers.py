@@ -166,7 +166,7 @@ class AMRFinderPlusNormalizer(BaseNormalizer):
 class AbricateNormalizer(BaseNormalizer):
     def __init__(self, database=None) -> None:
         if database not in ['ncbi', 'deeparg', 'resfinder', 'megares', 'argannot', 'abricate-card', 'abricate_card']:
-            raise Exception(f'{database} is not a supported database.')
+            raise ValueError(f'{database} is not a supported database.')
         
         if database == 'abricate-card':
             database = 'abricate_card'

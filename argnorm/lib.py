@@ -95,7 +95,7 @@ def map_to_aro(gene, database):
     import pandas as pd
 
     if database not in DATABASES:
-        raise Exception(f'{database} is not a supported database.')
+        raise ValueError(f'{database} is not a supported database.')
     
     if database == 'abricate-card':
         database = 'abricate_card'
@@ -121,7 +121,7 @@ def map_to_aro(gene, database):
     try:
         result = mapping_table.loc[gene, 'ARO']
     except KeyError:
-        raise Exception(f'{gene} is not in {database} database')
+        raise ValueError(f'{gene} is not in {database} database')
     else:
         if pd.isna(result):
             return None
