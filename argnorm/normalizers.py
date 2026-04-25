@@ -306,7 +306,7 @@ class HamronizationNormalizer(BaseNormalizer):
                     break
             else:
                 if self.skip_on_unsupported_tool:
-                    warn(f'{tool} is not a supported ARG annotation tool. Skipping this row.')
+                    warn(f'{analysis_software} is not a supported ARG annotation tool. Skipping this row.')
                     input_genes.append(None)
                     continue
                 else:
