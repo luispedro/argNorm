@@ -7,6 +7,7 @@ Genes annotated via abricate using the CARD database can now be normalized by ar
 
 ### Bug fixes
 - Fixed warning message in `HamronizationNormalizer.get_input_ids()` to report the actual unsupported tool name instead of the last key in the input ID lookup.
+- Removed bogus `'database'` entry from the passthrough list in `AbricateNormalizer.preprocess_ref_genes()`.
 
 ## Version 1.1.0 - released on 24 June 2025
 

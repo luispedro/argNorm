@@ -207,7 +207,7 @@ class AbricateNormalizer(BaseNormalizer):
             abricate_card=lambda x: x.split('~~~')[1] + '~~~' + x.split('~~~')[2]
         )
             
-        if self.database in ['database', 'sarg', 'ncbi']:
+        if self.database in ['sarg', 'ncbi']:
             return ref_genes
         return ref_genes.map(process_funcs_by_db[self.database])
     
